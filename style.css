@@ -1,0 +1,165 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #4c4c4c;
+  font-size: 1.4rem;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #e0f1ff; }
+
+/*
+a {
+  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+}
+*/
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center; }
+
+/* Layout
+------------------------------------------------------------*/
+.block-center, section .container, #button-box .button, #text i {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* Font
+------------------------------------------------------------*/
+.abel, section h2, #text h3 {
+  font-family: 'Abel', sans-serif; }
+
+.uppercase, section h2, #text h3 {
+  text-transform: uppercase; }
+
+.box {
+  background-image: url("./Photos/img_profile.jpg");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center; }
+
+section {
+  padding: 60px 0; }
+  section .container {
+    width: 90%; }
+  section h2 {
+    font-size: 2.8rem; }
+
+#button-box {
+  background-color: #f9ffed; }
+  #button-box .button {
+    background-color: #e0f1ff;
+    width: 120px;
+    padding: 10px;
+    border: solid;
+    Border-radius: 3px;
+    color: #4c4c4c;
+    text-align: center;
+    display: block;
+    font-size: 15px;
+    line-height: 0; }
+    #button-box .button:visited {
+      color: #4c4c4c; }
+
+#text {
+  background-color: #e0f1ff; }
+  #text .container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+  #text h2 {
+    color: #4c4c4c;
+    margin-bottom: 5px; }
+  #text .text-box {
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 10px 5px 0px 5px;
+    padding: 5px;
+    background-color: #BCD8EE;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  #text .text-box2 {
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 0px 5px 10px 5px;
+    padding: 10px;
+    background-color: #f9ffed;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  #text i {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    background-color: #f9ffed;
+    font-size: 4.5rem;
+    color: #FFF;
+    text-align: center;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%; }
+  #text h3 {
+    color: #4c4c4c;
+    margin-bottom: 5px;
+    font-size: 1.9rem;
+    font-weight: bold; }
+
+@media (min-width: 769px) {
+  /* Base
+  ------------------------------------------------------------*/
+  .box {
+    height: 500px; }
+
+  .sum-box {
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 10px 5px 0px 5px;
+    padding: 5px; }
+
+  .text-box {
+    background-color: #BCD8EE;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  .text-box2 {
+    background-color: #f9ffed;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  #text .container {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between; }
+  #text .skill-box {
+    margin: 0 10px; } }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,197 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック",
+YuGothic,
+"メイリオ",
+Verdana,
+"Hiragino Kaku Gothic ProN",
+Meiryo,
+sans-serif;
+
+// colors
+$baseColor: #e0f1ff;
+$subColor: #BCD8EE;
+$keyColor: #f9ffed;
+$fontColor: #4c4c4c;
+
+/* Base
+------------------------------------------------------------*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family: $baseFontFamily;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: $baseColor;
+}
+
+/*
+a {
+  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+}
+*/
+
+/* Align
+------------------------------------------------------------*/
+
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Font
+------------------------------------------------------------*/
+
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+
+
+
+.box {
+  background-image: url("./Photos/img_profile.jpg");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+// Common Styles
+section {
+  padding: 60px 0;
+  .container {
+    width: 90%;
+    @extend .block-center;
+  }
+  h2 {
+    @extend .abel;
+    font-size: 2.8rem;
+    @extend .uppercase;
+  }
+}
+
+#button-box {
+  background-color: $keyColor;
+  .button {
+    background-color:$baseColor;
+    width: 120px;
+    @extend .block-center;
+    padding: 10px;
+    border: solid;
+    Border-radius: 3px;
+    color: $fontColor;
+    text-align: center;
+    display: block;
+    font-size: 15px;
+    line-height: 0;
+    &:visited {
+      color: $fontColor;
+    }
+  }
+}
+// Text
+#text {
+  background-color: $baseColor;
+
+  .container {
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);
+  }
+  h2 {
+    color: $fontColor;
+    margin-bottom: 5px;
+  }
+  .text-box {
+    @include flex(1);
+    margin: 10px 5px 0px 5px;
+    padding: 5px;
+    background-color: $subColor;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+  }
+  .text-box2 {
+    @include flex(1);
+    margin: 0px 5px 10px 5px;
+    padding: 10px;
+    background-color: $keyColor;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+  }
+  i {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    background-color: $keyColor;
+    font-size: 4.5rem;
+    color: #FFF;
+    text-align: center;
+    @include box-sizing(border-box);
+    @include border-radius(50%);
+    @extend .block-center;
+  }
+  h3 {
+    @extend .abel;
+    @extend .uppercase;
+    color: $fontColor;
+    margin-bottom: 5px;
+    font-size: 1.9rem;
+    font-weight: bold;
+  }
+}
+
+// PC
+@media (min-width: 769px) {
+  /* Base
+  ------------------------------------------------------------*/
+  .box {
+    height: 500px;
+  }
+  .sum-box {
+    @include flex(1);
+    margin: 10px 5px 0px 5px;
+    padding: 5px;
+  }
+  .text-box {
+    background-color: $subColor;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+  }
+  .text-box2 {
+    background-color: $keyColor;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+  } 
+  // Text
+  #text {
+    .container {
+      @include flex-direction(row);
+      justify-content: space-between;
+    }
+    .skill-box {
+      margin: 0 10px;
+    }
+  }
+
+}
